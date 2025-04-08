@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const DoctorLogin = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('');  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate('/register');
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Doctor login attempt', { email, password });
-    // Handle login logic here
+    setError('');
+    
+    // Retrieve users from mock database (localStorage)
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find((u: any) => u.email === email && u.password === password && u.role === 'doctor');
+
+    if (user) {
+      // Save current user for session management
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      navigate('/doctor-dashboard');
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
@@ -44,10 +60,10 @@ const DoctorLogin = () => {
               required
             />
           </div>
-          
-          <button type="submit" className="auth-btn">Log In</button>
+            {error && <div className="error-message" style={{color: '#dc3545', marginBottom: '10px'}}>{error}</div>}          <button type="submit" className="auth-btn">Log In</button>
           
           <div className="auth-links">
+            <p>Don't have an account? <button onClick={handleRegister} style={{color: '#4a77d2', textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer', padding: 0}}>Register</button></p>
             <p><Link to="/forgot-password">Forgot Password?</Link></p>
           </div>
         </form>

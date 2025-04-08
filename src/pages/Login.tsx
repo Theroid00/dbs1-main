@@ -3,29 +3,39 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // This is just a placeholder - in a real app, you'd connect to an auth service
-    if (email && password) {
+
+    // Retrieve users from mock database (localStorage)
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find((u: any) => u.email === email && u.password === password);
+
+    if (user) {
       toast({
-        title: "Login successful",
-        description: "Welcome back to Bloom Hospital Vista!",
+        title: 'Login successful',
+        description: `Welcome back, ${user.name}!`,
       });
-      // In a real app, you would redirect or set auth state here
+
+      // Redirect based on role
+      if (user.role === 'doctor') {
+        navigate('/doctor-dashboard');
+      } else {
+        navigate('/patient-dashboard');
+      }
     } else {
       toast({
-        title: "Login failed",
-        description: "Please enter both email and password",
-        variant: "destructive",
+        title: 'Login failed',
+        description: 'Invalid email or password',
+        variant: 'destructive',
       });
     }
   };
