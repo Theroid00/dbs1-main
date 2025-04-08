@@ -1,0 +1,421 @@
+/* Jeevan styles imported from Jeevan/Home/home.css */
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../Jeevan/pics/home.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.navbar {
+    margin-top: 0%;
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;   
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;              
+}
+
+.navbar ul li {
+    margin-right: 20px;     
+}    
+
+.navbar ul li a {
+    text-decoration: none;       
+    color:#FEF9D9;              
+}
+.navbar ul li a:hover {
+    text-decoration: underline blue;            
+    transition: 0.3s;
+}
+.container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 150px;
+    width: 400px;
+
+    color: #FEF9D9; 
+    background: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.howtolend{
+    margin-top: 100px;
+    padding: 2rem;
+    background-color:#D2E0FB;
+    width: 75%;
+    border-radius: 30px;
+    margin-left: 15%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+ 
+.howtolend h1 {
+    font-size: 2.5rem;
+    color: linear-gradient(to right, #4e7edd, #D2E0FB);
+    margin-bottom: 2rem;
+}
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+  
+.step {
+    background-color: white;
+    width: 220px;
+    height: 220px;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.step:hover {
+    transform: scale(1.05);
+}
+  
+.step h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #082051;
+}
+  
+.step h2 {
+    font-size: 1.2rem;
+    color: #4e7edd;
+    margin: 0.5rem 0 0.3rem 0;
+}
+  
+.step p {
+    font-size: 0.9rem;
+    color: #4e7edd;
+}
+  
+.circle-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #4e7edd;
+}
+  
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lend{
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.about-us {
+    background: #f4f9ff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    background: #ffffff;
+    padding: 40px;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-container h2 {
+    font-size: 2.5rem;
+    color: #4a77d2;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 12px;
+    color: #4a77d2;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #333;
+    transform: scale(1.2);
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
+.glassy-sidebar {
+    top: 300px;
+    left: 3px;
+    width: 220px;
+    height: 160px;
+   
+    z-index: 10;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1); /* transparent white */
+    backdrop-filter: blur(10px); /* glassy effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+  
+.glassy-sidebar a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+  
+.glassy-sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+.glassy-sidebar a.danger:hover {
+    background-color: rgba(200, 86, 86, 0.2);
+    border-radius: 6px;
+}  
+
+.glassy-buttons {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: breathing 2s ease-in-out infinite;
+    width: fit-content;
+}
+.glassy-buttons .btn{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-weight: bold;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FEF9D9;
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
+}
+.glassy-buttons .btn:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    color: #FEF9D9;
+}
+
+@keyframes breathing {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.glassy-buttons .btn {
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.glassy-buttons .btn:hover {
+    transform: scale(1.05);
+}
+
+.doctors-section {
+    padding: 60px 20px;
+    background-color: #eff1ec;
+    text-align: center;
+}
+
+.doctors-section h2 {
+    font-size: 2.5rem;
+    color: #4a77d2;
+    margin-bottom: 40px;
+}
+
+.doctors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.doctor-card {
+    background: #FEF9D9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.doctor-card h3 {
+    margin-top: 15px;
+    color: #082661;
+}
+
+.doctor-card p {
+    color: #4a77d2;
+    font-size: 0.95rem;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Login/Register Forms */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../Jeevan/pics/home.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header img {
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.auth-header h2 {
+    color: #082661;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    color: #4a77d2;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #082661;
+    font-weight: 500;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d2e0fb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #4a77d2;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4a77d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-btn:hover {
+    background: #082661;
+}
+
+.auth-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auth-links a {
+    color: #4a77d2;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
