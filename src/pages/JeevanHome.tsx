@@ -5,15 +5,15 @@ const JeevanHome = () => {
   return (
     <>      <section className="main">        <nav className="navbar">
           <ul>
-            <li><Link to="/"><img src="/Jeevan/pics/jeevan.png" alt="Logo" className="logo" style={{ width: '60px', height: '30px' }} /></Link></li>
+            <li><Link to="/"><img src="/pics/jeevan.png" alt="Logo" className="logo" style={{ width: '60px', height: '30px' }} /></Link></li>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="#about">About</Link></li>
+            <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
         <div className="container">
           <div className="title">
-            <img src="/Jeevan/pics/jeevan.png" alt="Logo" className="logo" style={{ width: '300px', height: '125px' }} />
+            <img src="/pics/jeevan.png" alt="Jeevan Logo" className="logo" style={{ width: '300px', height: '125px' }} />
             <p>JEEVAN - Empowering Lives Through Seamless Healthcare.</p>
           </div>
           <div className="sidebar position-absolute glassy-sidebar" style={{ position: 'absolute', top: '300px', left: '20px' }}>
@@ -29,35 +29,35 @@ const JeevanHome = () => {
       </section>      <div className="doctor">
         <section className="doctors-section">
           <h2>Meet Our Top Doctors</h2>
-          <div className="doctors-grid">            <div className="doctor-card">              <img src="/Jeevan/pics/priyal.jpg" alt="Dr. Priya Sharma" />
+          <div className="doctors-grid">            <div className="doctor-card">              <img src="/pics/priyal.jpg" alt="Dr. Priya Sharma" />
               <h3>Dr. Priya Sharma</h3>
               <p>Cardiologist</p>
               <p>Over 5 years of experience in heart care and patient recovery.</p>
             </div>
             
             <div className="doctor-card">
-              <img src="/Jeevan/pics/𝓓𝓻_ 𝓜𝓲𝓴𝓮_.jpg" alt="Dr. Raj Mehta" />
+              <img src="/pics/𝓓𝓻_ 𝓜𝓲𝓴𝓮_.jpg" alt="Dr. Raj Mehta" />
               <h3>Dr. Raj Mehta</h3>
               <p>Neurologist</p>
               <p>Specializes in treating complex neurological disorders with care.</p>
             </div>
             
             <div className="doctor-card">
-              <img src="/Jeevan/pics/arunn.jpg" alt="Dr. Arjun Nair" />
+              <img src="/pics/arunn.jpg" alt="Dr. Arjun Nair" />
               <h3>Dr. Arjun Nair</h3>
               <p>Dermatologist</p>
               <p>Experienced in treating skin conditions with advanced cosmetic solutions.</p>
             </div>
                  
             <div className="doctor-card">
-              <img src="/Jeevan/pics/amit.jpg" alt="Dr. Amit Verma" />
+              <img src="/pics/amit.jpg" alt="Dr. Amit Verma" />
               <h3>Dr. Amit Verma</h3>
               <p>Orthopedic Surgeon</p>
               <p>Expert in joint replacement and sports injury treatments.</p>
             </div>
             
             <div className="doctor-card">
-              <img src="/Jeevan/pics/neha.jpg" alt="Dr. Sneha Kapoor" />
+              <img src="/pics/neha.jpg" alt="Dr. Sneha Kapoor" />
               <h3>Dr. Sneha Kapoor</h3>
               <p>Pediatrician</p>
               <p>Dedicated to providing compassionate care for children and newborns.</p>
@@ -70,7 +70,7 @@ const JeevanHome = () => {
         <div className="howtolend">
           <h1>What We Offer?</h1>        <div className="steps">            <div className="step">
               <h1>24/7 Ambulance Booking</h1>              <div className="circle-img">
-                <img src="/Jeevan/pics/ambulance.png" alt="Ambulance Icon" />
+                <img src="/pics/ambulance.png" alt="Ambulance Icon" />
               </div>
               <p>Book an ambulance anytime, 24/7.</p>
             </div>
@@ -78,7 +78,7 @@ const JeevanHome = () => {
             <div className="step">
               <h1>Find the Right Doctor</h1>
               <div className="circle-img">
-                <img src="/Jeevan/pics/doctor.png" alt="Doctor Icon" />
+                <img src="/pics/doctor.png" alt="Doctor Icon" />
               </div>
               <p>Book the doctor you need, tailored to your preferences.</p>
             </div>
@@ -86,7 +86,7 @@ const JeevanHome = () => {
             <div className="step">
               <h1>Get a Free Prescription</h1>
               <div className="circle-img">
-                <img src="/Jeevan/pics/free.png" alt="Prescription Icon" />
+                <img src="/pics/free.png" alt="Prescription Icon" />
               </div>
               <p>Just type your symptoms to receive a free doctor's prescription.</p>
             </div>
@@ -94,7 +94,7 @@ const JeevanHome = () => {
             <div className="step">
               <h1>Book Appointments</h1>
               <div className="circle-img">
-                <img src="/Jeevan/pics/receipt.png" alt="Appointment Icon" />
+                <img src="/pics/receipt.png" alt="Appointment Icon" />
               </div>
               <p>Skip the queues—book appointments and get medical receipts online, hassle-free and free of cost.</p>
             </div>
